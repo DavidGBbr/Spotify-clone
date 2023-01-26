@@ -3,6 +3,8 @@
   flex-direction: column;
   align-items: center;
   margin: 30px auto;
+  text-align: center;
+  padding: 10px;
 }
 
 #article-plans h3 {
@@ -83,7 +85,8 @@
   height: 20px;
   background-image: url("../assets/seta.svg");
   background-repeat: no-repeat;
-  left: -40px;
+  left: -30px;
+  top: -2px;
 }
 
 .card-btn {
@@ -105,4 +108,34 @@
 .card-footer a {
   text-decoration: underline;
   color: #535353;
+}
+
+@media screen and (max-width: 1200px) {
+  #content-cards {
+    max-width: 440px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+  .card-header .card-name {
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+  .card-header .card-pay {
+    display: inline;
+  }
+  .card-header span {
+    display: inline-block;
+  }
+  hr {
+    margin-top: 16px;
+  }
+  .card-list {
+    padding-top: 16px;
+    padding-bottom: 16px;
+    margin: 0px;
+  }
+  .card-footer {
+    min-height: 100%;
+  }
 }

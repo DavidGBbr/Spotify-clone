@@ -2,6 +2,8 @@ footer {
   margin-top: 140px;
   background: #000;
   padding: 80px 0px 50px;
+  display: flex;
+  flex-wrap: wrap;
 }
 
 footer a {
@@ -12,27 +14,37 @@ footer a:hover {
   color: #1ed760;
 }
 
-.footer-grid {
-  display: grid;
-  grid-template-columns: repeat(4, 200px) 1fr;
+#footer-logo {
+  padding: 0 15px;
 }
 
-.footer-list ul {
-  list-style: none;
+.footer-flex {
+  display: flex;
+  flex-wrap: wrap;
 }
 
-.footer-list li {
-  height: 42px;
+.table-content {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
 }
 
-.footer-list li:first-child {
+.footer-table {
+  padding: 0 15px;
+}
+
+.footer-table {
+  margin-bottom: 100px;
+}
+
+.footer-table dt {
   text-transform: uppercase;
   font-size: 0.75rem;
   font-weight: bold;
   color: #919496;
 }
 
-.footer-list a {
+.footer-table a {
   color: #fff;
   padding: 3px 0px 15px 0px;
 }
@@ -40,6 +52,7 @@ footer a:hover {
 .footer-social {
   display: flex;
   justify-content: flex-end;
+  margin: 0 15px 0 auto;
 }
 
 #footer-list-media {
@@ -58,6 +71,11 @@ footer a:hover {
   justify-content: center;
 }
 
+.footer-language {
+  margin: 0 15px;
+  width: 100%;
+}
+
 .footer-language a {
   color: #919496;
   font-size: 0.75rem;
@@ -67,6 +85,7 @@ footer a:hover {
 }
 
 .footer-info {
+  width: 100%;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -82,4 +101,45 @@ footer a:hover {
 .footer-list-info a {
   color: #919496;
   font-size: 0.75rem;
+}
+
+@media screen and (max-width: 1000px) {
+  .footer-social {
+    width: 100%;
+    justify-content: flex-start;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  footer {
+    padding: 50px 0 20px;
+  }
+  footer .container {
+    max-width: 100%;
+    padding: 10px;
+  }
+  .footer-flex {
+    flex-direction: column;
+    justify-content: flex-start;
+  }
+  .footer-table {
+    margin: 0;
+    padding: 0 15px;
+  }
+  #footer-list-media,
+  .footer-list-info {
+    padding: 0px;
+  }
+  .footer-list-info {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .footer-info {
+    display: grid;
+    grid-template-columns: 1fr max-content;
+    justify-content: space-between;
+  }
+  .footer-language a {
+    display: none;
+  }
 }

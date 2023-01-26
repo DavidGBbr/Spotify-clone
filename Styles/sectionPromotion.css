@@ -63,3 +63,18 @@
   color: #fff;
   border-bottom: 1px solid #fff;
 }
+
+@media screen and (max-width: 770px) {
+  #section-promotion {
+    padding: 16px;
+  }
+  #section-promotion h1 {
+    font-size: 1.75rem;
+  }
+  #section-promotion h2 {
+    font-size: 1.125rem;
+  }
+  #content-btn {
+    flex-direction: column;
+  }
+}
