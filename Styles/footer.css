@@ -26,7 +26,6 @@ footer a:hover {
 .table-content {
   display: flex;
   justify-content: space-between;
-  flex-wrap: wrap;
 }
 
 .footer-table {
@@ -118,6 +117,9 @@ footer a:hover {
     max-width: 100%;
     padding: 10px;
   }
+  .table-content {
+    flex-direction: column;
+  }
   .footer-flex {
     flex-direction: column;
     justify-content: flex-start;
@@ -130,6 +132,7 @@ footer a:hover {
   .footer-list-info {
     padding: 0px;
   }
+
   .footer-list-info {
     display: flex;
     flex-wrap: wrap;
@@ -139,7 +142,26 @@ footer a:hover {
     grid-template-columns: 1fr max-content;
     justify-content: space-between;
   }
+
+  .footer-list-info a {
+    display: flex;
+    flex-wrap: wrap;
+    font-size: 10px;
+  }
+
   .footer-language a {
-    display: none;
+    margin: 0 15px;
+  }
+}
+
+@media screen and (max-width: 650px) {
+  .footer-language {
+    margin: 0px;
+  }
+  .footer-table {
+    padding: 0px;
+  }
+  .footer-social {
+    margin: 0;
   }
 }
