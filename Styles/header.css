@@ -38,6 +38,9 @@ header {
 }
 
 @media screen and (max-width: 1000px) {
+  header {
+    padding: 10px;
+  }
   #btn-mobile {
     display: block;
     background-color: transparent;
